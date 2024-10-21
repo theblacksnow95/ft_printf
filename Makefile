@@ -8,11 +8,11 @@ FLAGS = -Wall -Werror -Wextra
 
 # Set the name of the library to create
 
-NAME = printf.a
+NAME = libftprintf.a
 
 # Include the source files with all the functions to compile
 
-SOURCES = ft_printf.c
+SOURCES = ft_printf.c ft_strlen_pf.c
 
 # Set the rule to all the transformations to the files, from .c ot an object file to be able to use by the library.
 

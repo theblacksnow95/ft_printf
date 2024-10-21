@@ -56,3 +56,6 @@ dkms.conf
 *.json
 .vscode
 output
+Debug
+.dSYM
+.DS_Store
