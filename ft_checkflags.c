@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_checkflags.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:20:59 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/22 17:57:47 by emurillo         ###   ########.fr       */
+/*   Created: 2024/10/22 12:38:39 by emurillo          #+#    #+#             */
+/*   Updated: 2024/10/22 18:37:19 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdio.h>
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *format, ...);
-int	ft_strlen_pf(char *str);
-int	ft_putchar_fd_int(int c, int fd);
-int	ft_putstr_fd_int(char const *str, int fd);
-int	ft_checkflags(char str, va_list ap, int fd);
+int	ft_checkflags(char str, va_list ap, int fd)
+{
+	int	temp;
 
-#endif
+	temp = 0;
+	if (str == 's')
+	{
+		temp += ft_putstr_fd_int(va_arg(ap, char const *), fd);
+	}
+	if (str == 'c')
+	{
+		temp += ft_putchar_fd_int(va_arg(ap, int), fd);
+		return (1);
+	}
+	return (temp);
+}

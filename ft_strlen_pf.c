@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:29:39 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/21 19:51:39 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/22 12:35:00 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_strlen_pf(char *str)
 	return (len);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	printf("total count: %d\n", ft_strlen_pf("string de pruebas!."));
 	return (0);
-}
+} */

@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd_int.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:20:59 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/22 17:57:47 by emurillo         ###   ########.fr       */
+/*   Created: 2024/10/22 12:29:02 by emurillo          #+#    #+#             */
+/*   Updated: 2024/10/22 17:57:50 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdio.h>
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *format, ...);
-int	ft_strlen_pf(char *str);
-int	ft_putchar_fd_int(int c, int fd);
-int	ft_putstr_fd_int(char const *str, int fd);
-int	ft_checkflags(char str, va_list ap, int fd);
-
-#endif
+int	ft_putchar_fd_int(int c, int fd)
+{
+	return (write(fd, &c, 1));
+}
