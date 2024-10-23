@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:20:59 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/22 17:57:47 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/23 12:27:41 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int	ft_printf(const char *format, ...);
 int	ft_strlen_pf(char *str);
-int	ft_putchar_fd_int(int c, int fd);
+int	ft_putchar_int(int c);
 int	ft_putstr_fd_int(char const *str, int fd);
 int	ft_checkflags(char str, va_list ap, int fd);
 

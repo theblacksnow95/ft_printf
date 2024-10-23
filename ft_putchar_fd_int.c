@@ -6,13 +6,13 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:29:02 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/22 17:57:50 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:18:13 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_fd_int(int c, int fd)
+int	ft_putchar_int(int c)
 {
-	return (write(fd, &c, 1));
+	return ((int)(write(1, &c, 1)));
 }

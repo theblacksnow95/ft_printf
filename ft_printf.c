@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:17:34 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/22 18:43:22 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:22:17 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_printf(const char *format, ...)
 	va_list			ap;
 	int				temp;
 
-	fd = 0;
+	fd = 1;
 	i = 0;
 	temp = 0;
 	va_start(ap, format);
@@ -27,7 +27,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			temp += ft_checkflags(format[i++], ap, fd);
+			temp += ft_checkflags(format[++i], ap, fd);
 			if (temp < 0)
 				return (-1);
 		}
@@ -40,19 +40,28 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (temp);
 }
-
-/* int	main(void)
+/*
+int	main(void)
 {
 	char	*st;
-	char	t1;
-	char	extrac;
-	char	*extras;
+	char	c1;
+	char	c2;
+	char	*st2;
 
 	st = "test1";
-	t1 = 'p';
-	extrac = 'l';
-	extras = "others string";
-	ft_printf("Result 'c': %c\nResult 's': %s\nOther \
-	'c' example: %c\nSecond 's': %s", t1, st, extrac, extras);
+	c1 = 'p';
+	c2 = 'l';
+	st2 = "others string";
+	ft_printf(" %c ", '0');
+	printf(" %d || %d ", ft_printf(" %s ", NULL), printf(" %s ", NULL));
+		TEST(1, print("%c", '0'));
+	TEST(2, print(" %c ", '0'));
+	TEST(3, print(" %c", '0' - 256));
+	TEST(4, print("%c ", '0' + 256));
+	TEST(5, print(" %c %c %c ", '0', 0, '1'));
+	TEST(6, print(" %c %c %c ", ' ', ' ', ' '));
+	TEST(7, print(" %c %c %c ", '1', '2', '3'));
+	TEST(8, print(" %c %c %c ", '2', '1', 0));
+	TEST(9, print(" %c %c %c ", 0, '1', '2'));
 	return (0);
 } */

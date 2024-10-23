@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:32:02 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/22 13:03:55 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:30:21 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ int	ft_putstr_fd_int(char const *str, int fd)
 	int	ret;
 
 	ret = 0;
+	if (!str)
+		str = "(null)";
 	while (str[ret])
 	{
-		write(fd, &str[ret], 1);
+		if ((write(fd, &str[ret], 1) == -1))
+			return (-1);
 		ret++;
 	}
 	return (ret);

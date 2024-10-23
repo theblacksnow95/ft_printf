@@ -22,6 +22,7 @@ OBJECTS = $(SOURCES:.c=.o)
 
 all: $(NAME)
 
+
 $(NAME): $(OBJECTS)
 	ar crs $(NAME) $(OBJECTS)
 
