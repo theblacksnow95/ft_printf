@@ -22,14 +22,13 @@ OBJECTS = $(SOURCES:.c=.o)
 
 all: $(NAME)
 
-
 $(NAME): $(OBJECTS)
 	ar crs $(NAME) $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS)
 
-fcleanL: clean
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
