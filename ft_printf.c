@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yourintraname <yourintraname@student.42Ber +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:17:34 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/23 15:22:17 by emurillo         ###   ########.fr       */
+/*   Created: 2024/10/24 16:04:13 by yourlogin         #+#    #+#             */
+/*   Updated: 2024/10/24 16:12:10 by yourintraname    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int				i;
-	int				fd;
-	va_list			ap;
-	int				temp;
+	int		i;
+	int		fd;
+	va_list	ap;
+	int		temp;
 
 	fd = 1;
 	i = 0;
@@ -40,28 +40,44 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (temp);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
 	char	*st;
 	char	c1;
 	char	c2;
 	char	*st2;
+	int		nb1;
 
 	st = "test1";
 	c1 = 'p';
 	c2 = 'l';
 	st2 = "others string";
-	ft_printf(" %c ", '0');
-	printf(" %d || %d ", ft_printf(" %s ", NULL), printf(" %s ", NULL));
-		TEST(1, print("%c", '0'));
-	TEST(2, print(" %c ", '0'));
-	TEST(3, print(" %c", '0' - 256));
-	TEST(4, print("%c ", '0' + 256));
-	TEST(5, print(" %c %c %c ", '0', 0, '1'));
-	TEST(6, print(" %c %c %c ", ' ', ' ', ' '));
-	TEST(7, print(" %c %c %c ", '1', '2', '3'));
-	TEST(8, print(" %c %c %c ", '2', '1', 0));
-	TEST(9, print(" %c %c %c ", 0, '1', '2'));
+	nb1 = 123;
+		printf(" %d || %d \n", ft_printf(" %c %c ", '0', c1), printf(" %c %c ",
+				'0',
+				c1));
+		printf(" %d || %d \n", ft_printf(" %s %s ", "hello world!", st),
+			printf(" %s %s ",
+				"hello world!", st));
+		printf(" %d || %d \n", ft_printf(" %i %i ", INT_MIN, nb1), printf(" %i
+				%i ",
+				INT_MIN, nb1));
+		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+				%d ",
+				INT_MIN, nb1));
+		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+				%d ",
+				INT_MIN, nb1));
+		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+				%d ",
+				INT_MIN, nb1));
+		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+				%d ",
+				INT_MIN, nb1));
+		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+				%d ",
+				INT_MIN, nb1));
+	printf(" %d || %d \n", ft_printf(" %u %u ", LONG_MAX, nb1), printf(" %u %u ", LONG_MAX, nb1));
 	return (0);
 } */
