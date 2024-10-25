@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yourintraname <yourintraname@student.42Ber +#+  +:+       +#+        */
+/*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:12:28 by yourlogin         #+#    #+#             */
-/*   Updated: 2024/10/24 16:12:42 by yourintraname    ###   ########.fr       */
+/*   Updated: 2024/10/25 17:15:09 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,9 @@ int			ft_putstr_fd_int(char const *str, int fd);
 int			ft_checkflags(char str, va_list ap, int fd);
 int			ft_putnbr(int nb, int fd);
 int			ft_putunsigned(unsigned int nb, int fd);
+int			ft_putnbrhex_l(unsigned int nb, int fd);
+int			ft_putnbrhex_c(unsigned int nb, int fd);
+int			ft_putpointer(void *p, int fd);
+int			ft_putnbrhex_p(unsigned long long nb, int fd);
 
 #endif

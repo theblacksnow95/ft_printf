@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:29:02 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/23 15:18:13 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/25 15:54:02 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_putchar_int(int c)
 {
-	return ((int)(write(1, &c, 1)));
+	if ((write(1, &c, 1)) == -1)
+		return (-1);
+	return (1);
 }

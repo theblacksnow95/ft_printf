@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yourintraname <yourintraname@student.42Ber +#+  +:+       +#+        */
+/*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:04:13 by yourlogin         #+#    #+#             */
-/*   Updated: 2024/10/24 16:12:10 by yourintraname    ###   ########.fr       */
+/*   Updated: 2024/10/25 17:00:04 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-		{
 			temp += ft_checkflags(format[++i], ap, fd);
+		else
+		{
+			temp += write(fd, &format[i], 1);
 			if (temp < 0)
 				return (-1);
 		}
-		else
-			temp += write(fd, &format[i], 1);
 		if (temp < 0)
 			return (-1);
 		i++;
@@ -54,30 +54,28 @@ int	ft_printf(const char *format, ...)
 	c2 = 'l';
 	st2 = "others string";
 	nb1 = 123;
-		printf(" %d || %d \n", ft_printf(" %c %c ", '0', c1), printf(" %c %c ",
-				'0',
-				c1));
-		printf(" %d || %d \n", ft_printf(" %s %s ", "hello world!", st),
-			printf(" %s %s ",
-				"hello world!", st));
-		printf(" %d || %d \n", ft_printf(" %i %i ", INT_MIN, nb1), printf(" %i
-				%i ",
-				INT_MIN, nb1));
+	printf(" %d || %d \n", ft_printf(" %c %c ", '0', c1), printf(" %c %c ",
+			'0',
+			c1));
+	printf(" %d || %d \n", ft_printf(" %s %s ", "hello world!", st),
+		printf(" %s %s ",
+			"hello world!", st));
+	printf(" %d || %d \n", ft_printf(" %i %i ", -10, nb1), printf(" %i %i ", -10, nb1));
 		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-				%d ",
-				INT_MIN, nb1));
-		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-				%d ",
-				INT_MIN, nb1));
-		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-				%d ",
-				INT_MIN, nb1));
-		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-				%d ",
-				INT_MIN, nb1));
-		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-				%d ",
-				INT_MIN, nb1));
+			%d ",
+			INT_MIN, nb1));
+	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+			%d ",
+			INT_MIN, nb1));
+	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+			%d ",
+			INT_MIN, nb1));
+	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+			%d ",
+			INT_MIN, nb1));
+	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
+			%d ",
+			INT_MIN, nb1));
 	printf(" %d || %d \n", ft_printf(" %u %u ", LONG_MAX, nb1), printf(" %u %u ", LONG_MAX, nb1));
 	return (0);
 } */
