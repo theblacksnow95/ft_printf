@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:57:06 by yourlogin         #+#    #+#             */
-/*   Updated: 2024/10/25 17:15:11 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:16:29 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,13 +112,3 @@ int	ft_putnbrhex_c(unsigned int nb, int fd)
 		return (-1);
 	return (num + 1);
 }
-
-
-/* int	main(void)
-{
-	int	res;
-
-	res = ft_putnbr(-2147483647, 1);
-	printf("\n%d\n", res);
-	return (0);
-} */

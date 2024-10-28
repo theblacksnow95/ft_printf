@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:12:56 by yourlogin         #+#    #+#             */
-/*   Updated: 2024/10/25 17:15:10 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:56:25 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,11 @@ int	ft_checkflags(char str, va_list ap, int fd)
 	if (str == 'X')
 		temp += ft_putnbrhex_c(va_arg(ap, unsigned int), fd);
 	if (str == 'p')
+	{
 		temp += ft_putpointer(va_arg(ap, void *), fd);
+		if (temp < 0)
+			return (-1);
+	}
 	if (temp < 0)
 		return (-1);
 	return (temp);

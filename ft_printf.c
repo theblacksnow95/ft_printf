@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:04:13 by yourlogin         #+#    #+#             */
-/*   Updated: 2024/10/25 17:00:04 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:04:25 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,42 +40,3 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (temp);
 }
-
-/* int	main(void)
-{
-	char	*st;
-	char	c1;
-	char	c2;
-	char	*st2;
-	int		nb1;
-
-	st = "test1";
-	c1 = 'p';
-	c2 = 'l';
-	st2 = "others string";
-	nb1 = 123;
-	printf(" %d || %d \n", ft_printf(" %c %c ", '0', c1), printf(" %c %c ",
-			'0',
-			c1));
-	printf(" %d || %d \n", ft_printf(" %s %s ", "hello world!", st),
-		printf(" %s %s ",
-			"hello world!", st));
-	printf(" %d || %d \n", ft_printf(" %i %i ", -10, nb1), printf(" %i %i ", -10, nb1));
-		printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-			%d ",
-			INT_MIN, nb1));
-	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-			%d ",
-			INT_MIN, nb1));
-	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-			%d ",
-			INT_MIN, nb1));
-	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-			%d ",
-			INT_MIN, nb1));
-	printf(" %d || %d \n", ft_printf(" %d %d ", INT_MIN, nb1), printf(" %d
-			%d ",
-			INT_MIN, nb1));
-	printf(" %d || %d \n", ft_printf(" %u %u ", LONG_MAX, nb1), printf(" %u %u ", LONG_MAX, nb1));
-	return (0);
-} */

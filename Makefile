@@ -12,7 +12,7 @@ NAME = libftprintf.a
 
 # Include the source files with all the functions to compile
 
-SOURCES = ft_printf.c ft_strlen_pf.c ft_putchar_fd_int.c ft_putstr_fd_int.c ft_checkflags.c \
+SOURCES = ft_printf.c ft_putchar_fd_int.c ft_putstr_fd_int.c ft_checkflags.c \
 		  ft_putnbr_pf.c ft_putpointer.c
 
 # Set the rule to all the transformations to the files, from .c ot an object file to be able to use by the library.
