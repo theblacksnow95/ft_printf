@@ -41,7 +41,7 @@ The `ft_printf` project is organized into the following files and functions:
 ### ⚙️ Usage
 To test `ft_printf`, clone this repository, compile using make, and then call `ft_printf` as you would use printf in C. Example:
 
-``` 
+``` c
 #include "ft_printf.h"
 
 int main() {
