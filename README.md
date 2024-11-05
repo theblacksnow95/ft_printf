@@ -37,3 +37,15 @@ The `ft_printf` project is organized into the following files and functions:
 
 ### Header File
 - `ft_printf.h`: Declares all project functions, macros, and includes necessary libraries, ensuring consistent functionality across files.
+
+### ⚙️ Usage
+To test `ft_printf`, clone this repository, compile using make, and then call `ft_printf` as you would use printf in C. Example:
+
+``` 
+#include "ft_printf.h"
+
+int main() {
+    ft_printf("Hello, %s! Your score is %d.\n", "world", 100);
+    return 0;
+}
+```
