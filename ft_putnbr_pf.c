@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:57:06 by yourlogin         #+#    #+#             */
-/*   Updated: 2024/10/28 13:16:29 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/12/16 23:51:57 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ static int	ft_putnbr_rec(int nb, int fd)
 int	ft_putnbr(int nb, int fd)
 {
 	int		cont;
-	char	num;
-	int		temp;
 
 	cont = 0;
 	if (nb == INT_MIN)

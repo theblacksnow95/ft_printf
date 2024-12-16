@@ -6,7 +6,7 @@
 /*   By: emurillo <emurillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:20:33 by emurillo          #+#    #+#             */
-/*   Updated: 2024/10/28 12:01:54 by emurillo         ###   ########.fr       */
+/*   Updated: 2024/12/16 23:53:16 by emurillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	ft_putpointer(void *p, int fd)
 int	ft_putnbrhex_p(unsigned long long nb, int fd)
 {
 	char	*hex;
-	char	res;
 	int		num;
 
 	num = 0;
